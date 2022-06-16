@@ -72,7 +72,7 @@ oplatalinks1000.add(
 
 menuAdmin = types.InlineKeyboardMarkup()
 menuAdmin1=types.InlineKeyboardButton(text="Фейк реф", callback_data='fakeref')
-menuAdmin2=types.InlineKeyboardButton(text="Для проверки платежки", url=oplatatest.pay_url)
+menuAdmin2=types.InlineKeyboardButton(text="Для проверки платежки", url=oplatatest)
 menuAdmin3=types.InlineKeyboardButton(text="Назад", callback_data='gotostart')
 menuAdmin4=types.InlineKeyboardButton(text="Изменить текущий промокод", callback_data='editpromocode')
 menuAdmin.row(menuAdmin1,menuAdmin2,menuAdmin4)
