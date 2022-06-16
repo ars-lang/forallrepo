@@ -3,11 +3,11 @@ from config import *
 from pyqiwip2p import QiwiP2P
 
 p2p = QiwiP2P(auth_key=QIWI_PRIV_KEY)
-oplatatest = p2p.bill(amount=0.50, lifetime=30)
-oplata100r = p2p.bill(amount=100, lifetime=30)
-oplata150r = p2p.bill(amount=150, lifetime=30)
-oplata300r = p2p.bill(amount=300, lifetime=30)
-oplata1000r = p2p.bill(amount=1000, lifetime=30)
+oplatatest = "https://qiwi.com/payment/form/99?amountInteger=1&amountFraction=0&currency=643&extra%5B%27comment%27%5D=5gh3rh&extra%5B%27account%27%5D=79912690945&blocked%5B0%5D=comment&blocked%5B1%5D=account&blocked%5B2%5D=sum"
+oplata100r = "https://qiwi.com/payment/form/99?amountInteger=100&amountFraction=0&currency=643&extra%5B%27comment%27%5D=5gh3rh&extra%5B%27account%27%5D=79912690945&blocked%5B0%5D=comment&blocked%5B1%5D=account&blocked%5B2%5D=sum"
+oplata150r = "https://qiwi.com/payment/form/99?amountInteger=150&amountFraction=0&currency=643&extra%5B%27comment%27%5D=5gh3rh&extra%5B%27account%27%5D=79912690945&blocked%5B0%5D=comment&blocked%5B1%5D=account&blocked%5B2%5D=sum"
+oplata300r = "https://qiwi.com/payment/form/99?amountInteger=300&amountFraction=0&currency=643&extra%5B%27comment%27%5D=5gh3rh&extra%5B%27account%27%5D=79912690945&blocked%5B0%5D=comment&blocked%5B1%5D=account&blocked%5B2%5D=sum"
+oplata1000r = "https://qiwi.com/payment/form/99?amountInteger=1000&amountFraction=0&currency=643&extra%5B%27comment%27%5D=5gh3rh&extra%5B%27account%27%5D=79912690945&blocked%5B0%5D=comment&blocked%5B1%5D=account&blocked%5B2%5D=sum"
 
 menuUser = types.ReplyKeyboardMarkup(True)
 menuUser.add("👤Профиль", "⁉Помощь", "🔥Покупка").add("📊О боте", "📕Вопросы").add("⚡️Бесплатный Нож⚡️")
@@ -48,25 +48,25 @@ oplata.add(
 
 oplatalinks100 = types.InlineKeyboardMarkup()
 oplatalinks100.add(
-    types.InlineKeyboardButton(text="Оплатить", url=oplata100r.pay_url),
+    types.InlineKeyboardButton(text="Оплатить", url=oplata100r),
     types.InlineKeyboardButton(text="Проверить оплату", callback_data='check')
 )
 
 oplatalinks150 = types.InlineKeyboardMarkup()
 oplatalinks150.add(
-    types.InlineKeyboardButton(text="Оплатить", url=oplata150r.pay_url),
+    types.InlineKeyboardButton(text="Оплатить", url=oplata150r),
     types.InlineKeyboardButton(text="Проверить оплату", callback_data='check')
 )
 
 oplatalinks300 = types.InlineKeyboardMarkup()
 oplatalinks300.add(
-    types.InlineKeyboardButton(text="Оплатить", url=oplata300r.pay_url),
+    types.InlineKeyboardButton(text="Оплатить", url=oplata300r),
     types.InlineKeyboardButton(text="Проверить оплату", callback_data='check')
 )
 
 oplatalinks1000 = types.InlineKeyboardMarkup()
 oplatalinks1000.add(
-    types.InlineKeyboardButton(text="Оплатить", url=oplata1000r.pay_url),
+    types.InlineKeyboardButton(text="Оплатить", url=oplata1000r),
     types.InlineKeyboardButton(text="Проверить оплату", callback_data='check')
 )
 
