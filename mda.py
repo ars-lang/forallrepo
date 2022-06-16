@@ -51,7 +51,7 @@ def dialogue(message):
     elif message.text == "⚡️Бесплатный Нож⚡️":
         bot.send_message(message.chat.id,"Крутим барабан.")
         time.sleep(2)
-        bot.send_photo(message.chat.id, photo=photo_url, caption="Вам выпала нож бабочка\nчтобы забрать ее нужно подписаться на канал", reply_markup=freeknifebuttons)
+        bot.send_message(message.chat.id, "Вам выпала нож бабочка\nчтобы забрать ее нужно подписаться на канал", reply_markup=freeknifebuttons)
     else:
         bot.send_message(message.chat.id, "Не понимаю..", reply_markup=menuUser)
 
